@@ -32,11 +32,11 @@ KeyObject = {
 }
 
 module BinaryToTextEncoding = {
-  type t = string
-  let base64: t = "base64"
-  let base64url: t = "base64url"
-  let hex: t = "hex"
-  let binary: t = "binary"
+  type t = 
+   | @as("base64") Base64
+   | @as("base64url") Base64Url
+   | @as("hex") Hex
+   | @as("binary") Binary
 }
 
 module PivateKey = {
